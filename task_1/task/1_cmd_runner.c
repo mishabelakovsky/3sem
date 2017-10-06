@@ -26,7 +26,7 @@ int main()
 						s[i] = 0;
 					}
 				}
-				char **argv = (char *)malloc((n + 2)*sizeof(char*));
+				char **argv = (char **)malloc((n + 2)*sizeof(char*));
 				argv[n + 1] = NULL;
 				for (i = 0, n = 0; i < l; i++)
 				{	
@@ -36,7 +36,7 @@ int main()
 						n++;		
 					}			
 				}
-				execv(argv[0], argv);	
+				execvp(argv[0], argv);	
 	   		case -1:
 				printf ("ERROR!1!!1!!!1");
 				exit(-1);
